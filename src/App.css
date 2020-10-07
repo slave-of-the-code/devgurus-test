@@ -1,0 +1,58 @@
+:root {
+  --color-gray: rgba(128, 128, 128, 1);
+  --color-gray-light: rgba(128, 128, 128, 0.25);
+  --color-gradiant-gray-toBottom: linear-gradient(
+    to bottom,
+    var(--color-gray-light),
+    transparent
+  );
+  --color-gradiant-gray-toTop: linear-gradient(
+    to top,
+    var(--color-gray),
+    transparent
+  );
+}
+
+#root {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  height: 100%;
+}
+
+.header {
+  grid: header;
+}
+.main {
+  grid: main;
+}
+.footer {
+  grid: footer;
+}
+
+input {
+  outline: none;
+}
+
+button,
+input[type="button"],
+input[type="submit"] {
+  padding: 1em 2em;
+  border-style: none;
+  background: gray;
+  border: 2px solid white;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  letter-spacing: 2px;
+  transform: all 0.25s 0s;
+}
+
+button:hover {
+  background: white;
+  color: gray;
+}

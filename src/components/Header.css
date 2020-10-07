@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  border-bottom: 3px solid rgba(128, 128, 128, 1);
+  background: var(--color-gray);
+}
+
+.header .brand {
+  text-shadow: 0 1px 2px white;
+}
