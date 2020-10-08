@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 // import PropTypes from 'prop-types';
 import { Data } from '../data/data';
 import PhotoItem from './PhotoItem';
+import './PhotoList.css';
 
 const PhotoList = (props) => {
   const { uri_api } = Data;
@@ -35,7 +36,7 @@ const PhotoList = (props) => {
 
   return (
     <div>
-      <ul>
+      <ul className="photo-list">
         {show.map((data, i) => (
           <PhotoItem key={i} {...data} />
         ))}

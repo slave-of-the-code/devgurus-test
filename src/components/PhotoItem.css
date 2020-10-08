@@ -1,0 +1,28 @@
+.photo-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 300px;
+  margin: 1em;
+  background: rgba(235, 235, 235, 0.9);
+}
+.photo-item-img {
+  flex: 1;
+  display: flex;
+}
+.photo-item-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 100%;
+  padding: 1em;
+}
+
+.photo-item-desc > p {
+  height: 80%;
+  overflow: hidden;
+  /* white-space: nowrap; */
+  text-overflow: ellipsis;
+}
