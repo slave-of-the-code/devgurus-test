@@ -1,3 +1,21 @@
 .main {
   background: var(--color-gradiant-gray-toBottom);
 }
+.main .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  height: 100%;
+}
+
+.main .container h2 {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.main .container small {
+  font-size: 3rem;
+  letter-spacing: 5px;
+}

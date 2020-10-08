@@ -9,4 +9,8 @@
 
 .header .brand {
   text-shadow: 0 1px 2px white;
+  transition: all 0.25s 0s ease;
+}
+.header .brand:hover {
+  text-shadow: 0 1px 2px transparent;
 }

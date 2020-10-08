@@ -1,24 +1,14 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Header from "./Header";
+import React, { Children } from 'react';
+import PropTypes from 'prop-types';
+import Header from './Header';
+import Footer from './Footer';
 
-import "./Main.css";
-import "./Footer.css";
-
-const Layout = (props) => {
+const Layout = ({ children }) => {
   return (
     <>
       <Header />
-      <main className="main">
-        <h1>main</h1>
-      </main>
-      <footer className="footer">
-        <p>
-          <a href="https://www.linkedin.com/in/gustavoml/">Gustavo Lopez</a>
-          <strong>copyright</strong>
-          <em>{new Date().getFullYear()}</em>
-        </p>
-      </footer>
+      {children}
+      <Footer />
     </>
   );
 };

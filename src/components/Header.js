@@ -7,7 +7,11 @@ const Header = memo(function Header(props) {
   return (
     <>
       <header className="header">
-        <a href="https://www.devgurus.io/">
+        <a
+          href="https://www.devgurus.io/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <h1 className="brand">devgurus.io</h1>
         </a>
         <div>
