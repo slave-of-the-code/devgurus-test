@@ -15,7 +15,7 @@ const Footer = (props) => {
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
           <strong>copyright</strong>
-          <em>{new Date().getFullYear()}</em>
+          <small>{new Date().getFullYear()}</small>
         </p>
       </footer>
     </>

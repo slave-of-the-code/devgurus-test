@@ -26,7 +26,7 @@ const App = () => {
               <PhotoList />
             </>
           </Route>
-          <Route component={NotFound} />
+          <Route path="*" exact component={NotFound} />
         </Switch>
       </Layout>
     </Router>

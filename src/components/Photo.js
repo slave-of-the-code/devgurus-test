@@ -1,6 +1,6 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { useParams } from "react-router-dom";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { useParams } from 'react-router-dom';
 
 const Photo = (props) => {
   console.log(props);
@@ -9,6 +9,7 @@ const Photo = (props) => {
   return (
     <>
       <h1>Gustavo Lopez</h1>
+      <pre>{JSON.stringify(params)}</pre>
     </>
   );
 };
