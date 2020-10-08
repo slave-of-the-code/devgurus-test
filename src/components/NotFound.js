@@ -1,7 +1,6 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
 
-const NotFound = (props) => {
+const NotFound = () => {
   return (
     <>
       <h1>Not Found</h1>

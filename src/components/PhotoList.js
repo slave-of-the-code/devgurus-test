@@ -4,14 +4,14 @@ import { Data } from '../data/data';
 import PhotoItem from './PhotoItem';
 import './PhotoList.css';
 
-const PhotoList = (props) => {
+const PhotoList = () => {
   const { uri_api } = Data;
 
   const [show, setShow] = useState([]);
 
   useEffect(() => {
     callAPI();
-  }, []);
+  });
 
   const callAPI = async () => {
     const resp = await fetch(uri_api);
