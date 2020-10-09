@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import './Header.css';
-import { Data } from '../data/data';
+import { Data } from '../../data/data';
 
 const Header = (props) => {
   const { headerLink } = Data;

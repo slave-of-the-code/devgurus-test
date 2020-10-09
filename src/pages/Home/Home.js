@@ -1,8 +1,8 @@
 import React from 'react';
 
-import './Main.css';
+import './Home.css';
 
-const Main = () => {
+const Home = () => {
   return (
     <>
       <main className="main">
@@ -17,6 +17,6 @@ const Main = () => {
   );
 };
 
-Main.propTypes = {};
+Home.propTypes = {};
 
-export default Main;
+export default Home;

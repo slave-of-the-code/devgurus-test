@@ -3,29 +3,21 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import './App.css';
 
-import NotFound from './components/NotFound';
-import Photo from './components/Photo';
-import PhotoList from './components/PhotoList';
+import Home from './pages/Home/Home';
+import Photo from './pages/Photo/Photo';
+import PhotoList from './pages/PhotoList/PhotoList';
+import NotFound from './pages/NotFound/NotFound';
 import Layout from './components/Layout';
-import Main from './components/Main';
 
 const App = () => {
   return (
     <Router>
       <Layout>
         <Switch>
-          <Route exact path="/" component={Main}></Route>
-          <Route path="/photo/:id">
-            <>
-              <Photo />
-            </>
-          </Route>
-          <Route path="/photo">
-            <>
-              <PhotoList />
-            </>
-          </Route>
-          <Route path="*" exact component={NotFound} />
+          <Route exact path="/" component={Home} />
+          <Route path="/photo/:id" component={Photo} />
+          <Route path="/photo" component={PhotoList} />
+          <Route exact path="*" component={NotFound} />
         </Switch>
       </Layout>
     </Router>

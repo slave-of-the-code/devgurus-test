@@ -1,24 +1,7 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
-import { useFetchMovieById } from '../hooks/useFetchMovies';
 import './PhotoDetail.css';
 
-const Photo = (props) => {
-  let params = useParams();
-  const id = parseInt(params.id);
-
-  const { data } = useFetchMovieById(id);
-  console.log(data);
-  return (
-    <>
-      <PhotoComponent {...data} />
-    </>
-  );
-};
-
-/* PhotoComponent */
-
-export const PhotoComponent = ({
+const PhotoDetail = ({
   id,
   title,
   thumbnail,
@@ -61,6 +44,6 @@ export const PhotoComponent = ({
   );
 };
 
-Photo.propTypes = {};
+PhotoDetail.propTypes = {};
 
-export default Photo;
+export default PhotoDetail;

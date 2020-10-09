@@ -1,8 +1,8 @@
 import React from 'react';
-import { useFetchMovies } from '../hooks/useFetchMovies';
+import { useFetchMovies } from '../../hooks/useFetchMovies';
 // import PropTypes from 'prop-types';
 
-import PhotoItem from './PhotoItem';
+import PhotoItem from '../../components/PhotoItem/PhotoItem';
 import './PhotoList.css';
 
 const PhotoList = () => {
