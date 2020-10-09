@@ -29,18 +29,18 @@
 }
 .photo-detail .container-detail .detail {
   display: grid;
+  height: 60vh;
   grid-template-areas: 'description' 'date-language';
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 5em;
-  height: calc(100% - 6em);
 }
 
 .photo-detail .container-detail .detail > p {
-  grid-area: 'description';
+  grid-area: description;
 }
 
 .photo-detail .container-detail .detail .date-language {
-  grid-area: 'date-language';
+  grid-area: date-language;
   display: flex;
   justify-content: space-evenly;
   align-items: center;

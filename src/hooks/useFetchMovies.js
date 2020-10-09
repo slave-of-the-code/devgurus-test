@@ -36,22 +36,20 @@ export const useFetchMovieById = (id) => {
   });
 
   useEffect(() => {
-    setTimeout(() => {
-      getMovieByIdAsync(id)
-        .then((movie) => {
-          setMovie({
-            data: movie,
-            loading: false
-          });
-        })
-        .catch((err) => {
-          setMovie({
-            messageError: err,
-            data: {},
-            loading: false
-          });
+    getMovieByIdAsync(id)
+      .then((movie) => {
+        setMovie({
+          data: movie,
+          loading: false
         });
-    }, 100000);
+      })
+      .catch((err) => {
+        setMovie({
+          messageError: err,
+          data: {},
+          loading: false
+        });
+      });
   }, [id]);
 
   return movie;

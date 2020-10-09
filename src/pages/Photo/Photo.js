@@ -6,7 +6,6 @@ import Error from '../Error/Error';
 
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSafari } from '@fortawesome/free-brands-svg-icons';
 
 const Photo = (props) => {
   let params = useParams();
