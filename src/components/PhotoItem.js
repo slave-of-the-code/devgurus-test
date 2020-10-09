@@ -14,7 +14,7 @@ const PhotoItem = ({ id, thumbnail, description }) => {
         <div className="photo-item-desc">
           <p>{description}</p>
           <div>
-            <Link to={'/photo/' + id}>
+            <Link to={`/photo/${id}`}>
               <button>show more...</button>
             </Link>
           </div>

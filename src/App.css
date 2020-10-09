@@ -25,13 +25,13 @@
 }
 
 .header {
-  grid: header;
+  grid-area: header;
 }
 .main {
-  grid: main;
+  grid-area: main;
 }
 .footer {
-  grid: footer;
+  grid-area: footer;
 }
 
 input {
@@ -55,4 +55,12 @@ input[type='submit'] {
 button:hover {
   background: white;
   color: gray;
+}
+
+.loading {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

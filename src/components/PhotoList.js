@@ -1,43 +1,28 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { useFetchMovies } from '../hooks/useFetchMovies';
 // import PropTypes from 'prop-types';
-import { Data } from '../data/data';
+
 import PhotoItem from './PhotoItem';
 import './PhotoList.css';
 
 const PhotoList = () => {
-  const { uri_api } = Data;
-
-  const [show, setShow] = useState([]);
-
-  useEffect(() => {
-    callAPI();
-  });
-
-  const callAPI = async () => {
-    const resp = await fetch(uri_api);
-    const data = await resp.json();
-    // console.log(data);
-
-    const showList = data.map((item) => {
-      const { show } = item;
-      return {
-        id: show.id,
-        thumbnail: show.image.medium,
-        title: show.name,
-        description: show.summary ?? ''
-      };
-    });
-    //console.log(showList);
-
-    setShow(showList);
+  const loadingHtml = () => {
+    return (
+      <>
+        <div className="loading">
+          <h3>loading...</h3>
+        </div>
+      </>
+    );
   };
 
-  // callAPI();
+  const { data: moviesList, loading } = useFetchMovies();
 
   return (
     <div>
+      {loading && loadingHtml()}
       <ul className="photo-list">
-        {show.map((data, i) => (
+        {moviesList.map((data, i) => (
           <PhotoItem key={i} {...data} />
         ))}
       </ul>
