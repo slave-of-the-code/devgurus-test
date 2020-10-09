@@ -1,21 +1,28 @@
 import { useEffect, useState } from 'react';
-import { getAllMoviesAsync } from '../apis/movies.api';
+import { getAllMoviesAsync, getMovieByIdAsync } from '../apis/movies.api';
 
 export const useFetchMovies = () => {
   const [movies, setMovies] = useState({
+    messageError: undefined,
     data: [],
     loading: true
   });
 
   useEffect(() => {
-    getAllMoviesAsync().then((moviesList) => {
-      //   setTimeout(() => {
-      setMovies({
-        data: moviesList,
-        loading: false
+    getAllMoviesAsync()
+      .then((moviesList) => {
+        setMovies({
+          data: moviesList,
+          loading: false
+        });
+      })
+      .catch((err) => {
+        setMovies({
+          messageError: err,
+          data: [],
+          loading: false
+        });
       });
-      //   }, 3000);
-    });
   }, []);
 
   return movies;
@@ -23,19 +30,28 @@ export const useFetchMovies = () => {
 
 export const useFetchMovieById = (id) => {
   const [movie, setMovie] = useState({
+    messageError: undefined,
     data: {},
     loading: true
   });
 
   useEffect(() => {
-    getAllMoviesAsync().then((moviesList) => {
-      //   setTimeout(() => {
-      setMovie({
-        data: moviesList.find((mov) => mov.id === id),
-        loading: false
-      });
-      //   }, 3000);
-    });
+    setTimeout(() => {
+      getMovieByIdAsync(id)
+        .then((movie) => {
+          setMovie({
+            data: movie,
+            loading: false
+          });
+        })
+        .catch((err) => {
+          setMovie({
+            messageError: err,
+            data: {},
+            loading: false
+          });
+        });
+    }, 100000);
   }, [id]);
 
   return movie;

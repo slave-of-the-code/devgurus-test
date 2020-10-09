@@ -4,6 +4,7 @@ import { useFetchMovies } from '../../hooks/useFetchMovies';
 
 import PhotoItem from '../../components/PhotoItem/PhotoItem';
 import './PhotoList.css';
+import Error from '../Error/Error';
 
 const PhotoList = () => {
   const loadingHtml = () => {
@@ -16,9 +17,11 @@ const PhotoList = () => {
     );
   };
 
-  const { data: moviesList, loading } = useFetchMovies();
+  const { data: moviesList, loading, messageError } = useFetchMovies();
 
-  return (
+  return messageError ? (
+    <Error error={messageError} />
+  ) : (
     <div>
       {loading && loadingHtml()}
       <ul className="photo-list">
