@@ -11,11 +11,11 @@ export const getAllMoviesAsync = async () => {
 
     return {
       id: show.id,
-      thumbnail: show.image.medium,
+      thumbnail: show.image?.medium,
       title: show.name,
       description: show.summary ?? '',
       genres: show.genres,
-      raitingAverage: show.rating.average ?? '',
+      raitingAverage: show.rating?.average ?? '',
       datePremier: show.premiered ?? '',
       language: show.language
     };
