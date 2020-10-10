@@ -33,6 +33,7 @@
   grid-template-areas: 'description' 'date-language';
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 5em;
+  padding-top: 0.5em;
 }
 
 .photo-detail .container-detail .detail > p {
@@ -45,4 +46,15 @@
   justify-content: space-evenly;
   align-items: center;
   background: rgba(128, 128, 128, 0.15);
+}
+
+@media screen and (max-width: 460px) {
+  .photo-detail {
+    flex-direction: column;
+    padding: 1em;
+  }
+
+  .photo-detail .container-detail .detail .date-language {
+    flex-direction: column;
+  }
 }

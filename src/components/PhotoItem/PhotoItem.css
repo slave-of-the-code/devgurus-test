@@ -26,3 +26,16 @@
   /* white-space: nowrap; */
   text-overflow: ellipsis;
 }
+
+@media screen and (max-width: 460px) {
+  .photo-item {
+    flex-direction: column;
+    height: fit-content;
+    padding-top: 0.5em;
+    width: 90vw;
+  }
+
+  .photo-item-desc > p {
+    margin: 1em 0;
+  }
+}
