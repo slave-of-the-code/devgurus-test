@@ -1,10 +1,13 @@
 import React from 'react';
 
+import './NotFound.scss';
+
 const NotFound = () => {
   return (
-    <>
-      <h1>Not Found</h1>
-    </>
+    <section className="notFound">
+      <h1>404</h1>
+      <p>not found</p>
+    </section>
   );
 };
 
